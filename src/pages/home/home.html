@@ -21,7 +21,7 @@
         
     <div [ngSwitch]="pet1">
         <ion-list *ngSwitchCase="'puppies'">
-            <div [ngControl]="dashboardTab"></div>
+            <dashboard></dashboard>
         </ion-list>
         
         <ion-list *ngSwitchCase="'kittens'">
