@@ -11,6 +11,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { Storage, IonicStorageModule } from '@ionic/storage';
+import { HomePage } from '../pages/home/home';
+import { DashboardPage } from '../pages/home/dashboard/dashboard';
+import { MessagePage } from '../pages/home/message/message';
+
+
 
 @NgModule({
   declarations: [
@@ -18,11 +23,14 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    LoginPage
+    LoginPage,
+    HomePage,
+    DashboardPage,
+    MessagePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{tabsPlacement:"bottom"}),
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -31,7 +39,10 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    LoginPage
+    LoginPage,
+    HomePage,
+    DashboardPage,
+    MessagePage
   ],
   providers: [
     StatusBar,

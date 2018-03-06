@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Home Page</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div padding>
+        <ion-segment [(ngModel)]="pet1">
+            <ion-segment-button value="kittens">
+            Kittens
+            </ion-segment-button>
+            <ion-segment-button value="puppies">
+            Puppies
+            </ion-segment-button>
+        </ion-segment>
+        </div>
+        
+    <div [ngSwitch]="pet1">
+        <ion-list *ngSwitchCase="'puppies'">
+            <div [ngControl]="dashboardTab"></div>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'kittens'">
+            <ion-item>
+            <h2>Luna</h2>
+            </ion-item>
+            ...
+        </ion-list>
+    </div>
+</ion-content>
