@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicApp, IonicModule, IonicErrorHandler, IonicPageModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
@@ -14,6 +14,7 @@ import { Storage, IonicStorageModule } from '@ionic/storage';
 import { HomePage } from '../pages/home/home';
 import { DashboardPage } from '../pages/home/dashboard/dashboard';
 import { MessagePage } from '../pages/home/message/message';
+import { MenuPage } from '../pages/menu/menu';
 
 
 
@@ -26,12 +27,14 @@ import { MessagePage } from '../pages/home/message/message';
     LoginPage,
     HomePage,
     DashboardPage,
-    MessagePage
+    MessagePage,
+    MenuPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{tabsPlacement:"bottom"}),
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    IonicPageModule.forChild(DashboardPage)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +45,8 @@ import { MessagePage } from '../pages/home/message/message';
     LoginPage,
     HomePage,
     DashboardPage,
-    MessagePage
+    MessagePage,
+    MenuPage
   ],
   providers: [
     StatusBar,

@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { Storage } from '@ionic/storage'
 import { HomePage } from '../pages/home/home';
+import { MenuPage } from '../pages/menu/menu';
 
 @Component({
   templateUrl: 'app.html'
@@ -35,6 +36,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
+      { title: 'Menu', component: MenuPage},
       { title: 'My First List', component: ListPage },
       { title: 'Home', component: HomePage },
     ];

@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+     
     <div padding>
         <ion-segment [(ngModel)]="pet1">
             <ion-segment-button value="kittens">
@@ -21,7 +22,7 @@
         
     <div [ngSwitch]="pet1">
         <ion-list *ngSwitchCase="'puppies'">
-            <dashboard></dashboard>
+            <dashboard #dashboard></dashboard>
         </ion-list>
         
         <ion-list *ngSwitchCase="'kittens'">
